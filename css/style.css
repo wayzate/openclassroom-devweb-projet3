@@ -10,6 +10,46 @@ text-align: center;
 padding: 30px;
 }
 
+/* FOOTER */
+footer {
+  background-color: #353535;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 25px;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover /* Apparence au survol des liens */ {
+  text-decoration: underline;
+} 
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  padding: 5px 0 5px 0;
+}
+footer ul .fa-utensils {
+  margin-right: 12px;
+}
+footer ul .fa-hands-helping {
+  margin-right: 5px;
+}
+
+/* ---------------------------- PAGE ACCUEIL ---------------------------- */
+
 /* LOCALISATION */
 
 .localisation {
@@ -120,7 +160,6 @@ padding: 30px;
 }
 
 
-
 /* RESTAURANTS */
 .restaurants {
   background: #f2f2f2;
@@ -149,41 +188,24 @@ padding: 30px;
   max-height: 220px;
 }
 
-
-/* FOOTER */
-footer {
-	background-color: #353535;
-	font-size: 100%;
-	vertical-align: baseline;
-	padding: 25px;
-	color: white; 
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
+/* ---------------------------- PAGES MENUS ---------------------------- */
 
 
-footer a {
-	color: white;
-	text-decoration: none;
-}
 
-footer a:hover /* Apparence au survol des liens */ {
-	text-decoration: underline;
-} 
 
-footer ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
 
-footer ul li {
-	padding: 5px 0 5px 0;
-}
-footer ul .fa-utensils {
-	margin-right: 12px;
-}
-footer ul .fa-hands-helping {
-	margin-right: 5px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
