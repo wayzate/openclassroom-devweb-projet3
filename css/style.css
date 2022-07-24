@@ -1,0 +1,189 @@
+
+main {
+	background-color: white; 
+}
+
+/* HEADER */
+
+.logo {
+text-align: center;
+padding: 30px;
+}
+
+/* LOCALISATION */
+
+.localisation {
+	background: #eaeaea;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0px 5px 5px 0px #dddddd;
+}
+
+.input-localisation input {
+  border: none;
+  background: #eaeaea;
+  font-size: 15px;
+  padding: 20px 5px 20px 5px;
+  margin-top: 5px;
+  text-align: center;
+  width: 150px;
+}
+
+/* A PROPOS */
+
+.btnexplore button {
+  background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 5px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px #aaa;
+  cursor: pointer;
+}
+.btnexplore button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
+
+.about {
+  background: #f6f6f6;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+}
+.about h2 {
+  font-weight: bold;
+  margin: 0;
+}
+.about p {
+  color: #4d4d4d;
+}
+
+/* FONCTIONNEMENT */
+
+.fonctionnement {
+  margin-bottom: 50px;
+}
+
+.fonctionnement h2 {
+  padding: 20px;
+}
+
+.steps {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 15px;
+  margin: 15px 20px 15px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
+  background-color: #f5f5f5;
+}
+
+.steps li p {
+  font-weight: 500;
+  margin-left: 20px;
+}
+.steps li:hover {
+  background: #f2eafb;
+}
+
+.steps li:hover .fas {
+  color: #9356dc;
+}
+
+.steps-number {
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+  margin-left: -40px;
+}
+.steps-icon {
+  color: grey;
+  font-size: 19px;
+  margin-left: 20px;
+}
+
+
+
+/* RESTAURANTS */
+.restaurants {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants h2 {
+ padding: 30px 0px 0px 10px;
+}
+
+.restau {
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px #aaa;
+  margin: 20px;
+  position: relative;
+  background: #fff;
+}
+
+.restau img {
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+}
+
+
+/* FOOTER */
+footer {
+	background-color: #353535;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 25px;
+	color: white; 
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
+footer a:hover /* Apparence au survol des liens */ {
+	text-decoration: underline;
+} 
+
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer ul li {
+	padding: 5px 0 5px 0;
+}
+footer ul .fa-utensils {
+	margin-right: 12px;
+}
+footer ul .fa-hands-helping {
+	margin-right: 5px;
+}
