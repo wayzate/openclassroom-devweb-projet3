@@ -1,4 +1,8 @@
 
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
 main {
 	background-color: white; 
 }
@@ -34,6 +38,7 @@ footer {
 
 footer h3 {
   text-transform: none;
+  font-family: Shrikhand, sans-serif;
 }
 
 footer a {
@@ -182,6 +187,7 @@ footer ul .fa-hands-helping {
 
 .restaurants h2 {
  padding: 30px 0px 0px 10px;
+
 }
 
 .restau {
@@ -297,6 +303,7 @@ padding: 15px;
 
 .menu-title {
   display: flex;
+  font-family: Shrikhand, sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
