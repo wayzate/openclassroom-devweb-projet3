@@ -1,0 +1,82 @@
+/* RESTAURANTS */
+.restaurants {
+  padding-bottom: 50px;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants h2 {
+ padding: 45px 0px 0px 10px;
+ margin-bottom: 15px;
+ font-size: 23px;
+}
+
+.restau {
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px $grey;
+  margin: 10px 20px 15px 20px;
+  position: relative;
+  background: $white;
+}
+
+.restau a:hover /* Apparence au survol des liens */ {
+  text-decoration: none;
+  color: black;
+} 
+
+.restau a {
+  color: black;
+  text-decoration: none;
+}
+
+.restau h4 {
+  margin: 10px 0px 0px 20px;
+  font-size: 18px;
+}
+
+.restau p {
+  margin:0px 0px 20px 20px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.restau img {
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 100%;
+  max-height: 170px;
+}
+
+.heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart-logo {
+  padding: 10px 20px 0px 20px;
+  line-height: 3px;
+}
+
+.heart-logo fa-heart {
+  font-size: 3px;
+}
+
+.btnnew {
+  color: #008766;
+  background: $lightCyan;
+  border: 5px solid $lightCyan;
+  border-radius: 3px;
+  position: absolute;
+  right: 4%;
+  top: 5%;
+}
+
+.btnnew span {
+padding: 10px;
+font-size: 14px
+;
+}

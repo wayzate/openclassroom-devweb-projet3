@@ -1,1 +1,30 @@
-main.scss
+/* ---------------------------- UTILS ---------------------------- */
+/* GLOBALS */
+@import './utils/globals';
+/* MIXINS */
+@import './utils/mixins';
+/* KEYFRAMES */
+@import './utils/keyframes';
+
+/* ---------------------------- COMMON ---------------------------- */
+@import './common/common';
+@import './common/header';
+@import './common/footer';
+
+/* ---------------------------- PAGE ACCUEIL ---------------------------- */
+@import'./animations/animations';
+@import './accueil/localisation';
+@import './accueil/about';
+@import './accueil/fonctionnement';
+@import './accueil/restaurants';
+
+/* ---------------------------- PAGES MENUS ---------------------------- */
+@import'./menu/plats';
+@import'./menu/btnorder';
+@import'./animations/animations';
+
+
+
+
+
+

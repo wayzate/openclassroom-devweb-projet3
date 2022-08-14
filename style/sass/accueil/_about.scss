@@ -1,0 +1,36 @@
+/* A PROPOS */
+
+.btnexplore button {
+  background-image: linear-gradient(to left, $bleumagenta, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 15px 20px;
+  color: $white;
+  box-shadow: 4px 4px 6px $grey;
+  cursor: pointer;
+}
+
+.btnexplore button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
+
+
+.about {
+  background: $whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0px 50px 0px;
+}
+.about h2 {
+  font-weight: bold;
+  margin: 10px 35px 10px 35px;
+   font-size: 25px;
+}
+.about p {
+  color: #4d4d4d;
+  font-weight: lighter;
+  font-size: 18px;
+  margin : 12px 25px 35px 25px
+}

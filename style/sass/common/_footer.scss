@@ -1,0 +1,45 @@
+/* FOOTER */
+footer {
+  background-color: #353535;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 10px 10px 30px 10px;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer h3 {
+  font-size: 18px;
+  text-transform: none;
+  font-family: Shrikhand, sans-serif;
+      margin-bottom: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover /* Apparence au survol des liens */ {
+  text-decoration: none;
+} 
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  padding: 5px 0 5px 10px;
+}
+footer ul .fa-utensils {
+  margin-right: 12px;
+}
+footer ul .fa-hands-helping {
+  margin-right: 5px;
+}
+
+

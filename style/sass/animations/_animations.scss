@@ -1,0 +1,52 @@
+.heart {
+  color: black;
+  cursor: pointer;
+  &:hover {
+    animation: fill 0.3s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
+  }
+}
+
+.starter {
+  animation: fadein 3s ease-in-out;
+}
+
+.dish {
+  animation: fadein 6s ease-in-out;
+  }
+
+.dessert {
+  animation: fadein 9s ease-in-out;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightCyan;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+}
+
+.check .fa-check-circle {
+  color: white;
+  font-size: 20px;
+}
+
+.check-anim {
+    &--rotTurns {
+        transform: rotate(-1turn);
+        transition: transform 500ms ease-in-out;
+    }
+}

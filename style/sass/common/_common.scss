@@ -1,0 +1,33 @@
+/* COMMON */
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+
+main {
+  background-color: white; 
+}
+
+.main {
+  background-color: $whitesmoke; 
+}
+
+
+h3 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 15px;
+  margin: 40px 5px 5px 5px;
+}
+
+h4 {
+  margin : 0;
+      font-size: 18px;
+
+}
+
+h2 {
+  font-size: 28px;
+  margin : 0px
+}
