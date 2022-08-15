@@ -1,8 +1,6 @@
 /* ---------------------------- UTILS ---------------------------- */
 /* GLOBALS */
 /* GLOBALS */
-/* MIXINS */
-/* KEYFRAMES */
 /* ---------------------------- COMMON ---------------------------- */
 /* COMMON */
 body, html {
@@ -32,11 +30,13 @@ h4 {
 
 h2 {
   font-size: 28px;
+  font-weight: 100;
   margin: 0px;
 }
 
 /* HEADER */
 .logo {
+  background-color: white;
   text-align: center;
   padding: 20px 15px 10px 15px;
 }
@@ -79,6 +79,7 @@ footer h3 {
   font-size: 18px;
   text-transform: none;
   font-family: Shrikhand, sans-serif;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -110,11 +111,67 @@ footer ul .fa-hands-helping {
 }
 
 /* ---------------------------- PAGE ACCUEIL ---------------------------- */
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #eaeaea;
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+.loader__item {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356dc;
+}
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  100% {
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .fillOnHover {
   cursor: pointer;
 }
 .fillOnHover:hover {
-  animation: fillUp 0.4s ease-in-out;
+  animation: fillUp 0.6s ease-in-out;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: text;
@@ -134,54 +191,97 @@ footer ul .fa-hands-helping {
     opacity: 1;
   }
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .starter {
-  animation: fadein 3s ease-in-out;
+  animation: fadein 2s ease-in-out;
 }
 
 .dish {
-  animation: fadein 6s ease-in-out;
+  animation: fadein 4s ease-in-out;
 }
 
 .dessert {
-  animation: fadein 9s ease-in-out;
+  animation: fadein 6s ease-in-out;
 }
 
-.check {
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+}
+.checkContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
+  width: 70px;
+  height: 70px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
   right: -50px;
   top: 0;
+  opacity: 0;
+  overflow: auto;
 }
 
-.check .fa-check-circle {
+.checkContainer .fa-check-circle {
   color: white;
   font-size: 20px;
 }
 
-.rotateCheck:hover {
-  animation: rotate 0.5s ease-in-out;
+.meals {
+  overflow: hidden;
+}
+.meals .checkContainer {
+  animation: slideToTheRight 0.5s;
+}
+.meals:hover .checkContainer {
+  animation: slideToTheLeft 0.5s;
+  animation-fill-mode: forwards;
+}
+.meals:hover .check {
+  animation: rotateOneTurn 0.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes rotate {
+@keyframes slideToTheLeft {
   from {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+  }
+}
+@keyframes slideToTheRight {
+  from {
+    opacity: 1;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+  }
+}
+@keyframes rotateOneTurn {
+  from {
+    transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
   }
   to {
+    transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
   }
 }
@@ -248,6 +348,7 @@ footer ul .fa-hands-helping {
 }
 
 .fonctionnement h2 {
+  font-weight: bold;
   padding: 20px;
   font-size: 23px;
   margin-bottom: 0px;
@@ -315,7 +416,8 @@ footer ul .fa-hands-helping {
 }
 
 .restaurants h2 {
-  padding: 45px 0px 0px 10px;
+  font-weight: bold;
+  padding: 45px 0px 0px 20px;
   margin-bottom: 15px;
   font-size: 23px;
 }
@@ -403,11 +505,11 @@ footer ul .fa-hands-helping {
 
 .main-menu {
   background-color: #f6f6f6;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
   width: 100%;
   position: relative;
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 .menu-title {
@@ -415,7 +517,7 @@ footer ul .fa-hands-helping {
   font-family: Shrikhand, sans-serif;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 20px 0px 20px;
+  padding: 30px 20px 0px 20px;
 }
 
 .meals {
@@ -465,11 +567,73 @@ footer ul .fa-hands-helping {
   width: 60%;
 }
 
+.btnorder button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #eaeaea;
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+.loader__item {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356dc;
+}
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  100% {
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .fillOnHover {
   cursor: pointer;
 }
 .fillOnHover:hover {
-  animation: fillUp 0.4s ease-in-out;
+  animation: fillUp 0.6s ease-in-out;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: text;
@@ -489,54 +653,97 @@ footer ul .fa-hands-helping {
     opacity: 1;
   }
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .starter {
-  animation: fadein 3s ease-in-out;
+  animation: fadein 2s ease-in-out;
 }
 
 .dish {
-  animation: fadein 6s ease-in-out;
+  animation: fadein 4s ease-in-out;
 }
 
 .dessert {
-  animation: fadein 9s ease-in-out;
+  animation: fadein 6s ease-in-out;
 }
 
-.check {
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+}
+.checkContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
+  width: 70px;
+  height: 70px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
   right: -50px;
   top: 0;
+  opacity: 0;
+  overflow: auto;
 }
 
-.check .fa-check-circle {
+.checkContainer .fa-check-circle {
   color: white;
   font-size: 20px;
 }
 
-.rotateCheck:hover {
-  animation: rotate 0.5s ease-in-out;
+.meals {
+  overflow: hidden;
+}
+.meals .checkContainer {
+  animation: slideToTheRight 0.5s;
+}
+.meals:hover .checkContainer {
+  animation: slideToTheLeft 0.5s;
+  animation-fill-mode: forwards;
+}
+.meals:hover .check {
+  animation: rotateOneTurn 0.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes rotate {
+@keyframes slideToTheLeft {
   from {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+  }
+}
+@keyframes slideToTheRight {
+  from {
+    opacity: 1;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+  }
+}
+@keyframes rotateOneTurn {
+  from {
+    transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
   }
   to {
+    transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
   }
 }

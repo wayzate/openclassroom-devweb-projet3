@@ -15,3 +15,9 @@
   padding: 17px;
   width: 60%;
 }
+
+.btnorder button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
