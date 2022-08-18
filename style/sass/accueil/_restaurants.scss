@@ -21,10 +21,10 @@
   background: $white;
 }
 
-.restau a:hover /* Apparence au survol des liens */ {
-  text-decoration: none;
-  color: black;
-} 
+// .restau a:hover {
+//   text-decoration: none;
+//   color: black;
+// } 
 
 .restau a {
   color: black;
@@ -62,12 +62,12 @@
   line-height: 3px;
 }
 
-.heart-logo fa-heart {
-  font-size: 3px;
-}
+// .heart-logo fa-heart {
+//   font-size: 3px;
+// }
 
 .btnnew {
-  color: #008766;
+  color: $spectralGreen;
   background: $lightCyan;
   border: 5px solid $lightCyan;
   border-radius: 3px;

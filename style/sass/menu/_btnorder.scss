@@ -5,7 +5,7 @@
 }
 
 .btnorder button {
-  background-image: linear-gradient(to top, $bleumagenta, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-image: linear-gradient(to top, $bleumagenta, $gradientColor2, $gradientColor3, $gradientColor4, $gradientColor4);
   border: 1px solid transparent;
   border-radius: 30px;
   color: $white;
@@ -17,7 +17,7 @@
 }
 
 .btnorder button:hover {
-  background-color: #ae80e5;
+  background-color: $pink;
   background-blend-mode: lighten;
-  box-shadow: 4px 4px 6px #000;
+  box-shadow: 4px 4px 6px #666;
 }
