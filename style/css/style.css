@@ -233,6 +233,11 @@ footer ul .fa-hands-helping {
   font-size: 20px;
 }
 
+.itemPrice {
+  animation: slideToTheRight 0.5s;
+  margin-right: 15px;
+}
+
 .meals {
   overflow: hidden;
 }
@@ -245,6 +250,10 @@ footer ul .fa-hands-helping {
 }
 .meals:hover .check {
   animation: rotateOneTurn 0.5s;
+  animation-fill-mode: forwards;
+}
+.meals:hover .itemPrice {
+  animation: slideToTheLeft 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -686,6 +695,11 @@ footer ul .fa-hands-helping {
   font-size: 20px;
 }
 
+.itemPrice {
+  animation: slideToTheRight 0.5s;
+  margin-right: 15px;
+}
+
 .meals {
   overflow: hidden;
 }
@@ -698,6 +712,10 @@ footer ul .fa-hands-helping {
 }
 .meals:hover .check {
   animation: rotateOneTurn 0.5s;
+  animation-fill-mode: forwards;
+}
+.meals:hover .itemPrice {
+  animation: slideToTheLeft 0.5s;
   animation-fill-mode: forwards;
 }
 
