@@ -141,6 +141,12 @@
 //   }
 // }
 
+
+.itemPrice {
+  animation: slideToTheRight 0.5s;
+  margin-right: 15px;
+}
+
 .meals {
   overflow: hidden;
   .checkContainer {
@@ -152,6 +158,10 @@
   }
   &:hover .check {
     animation: rotateOneTurn 0.5s;
+    animation-fill-mode: forwards;
+  }
+  &:hover .itemPrice {
+    animation: slideToTheLeft 0.5s;
     animation-fill-mode: forwards;
   }
 }
