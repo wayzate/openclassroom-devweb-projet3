@@ -238,9 +238,6 @@ footer ul .fa-hands-helping {
   margin-right: 15px;
 }
 
-.meals {
-  overflow: hidden;
-}
 .meals .checkContainer {
   animation: slideToTheRight 0.5s;
 }
@@ -256,7 +253,19 @@ footer ul .fa-hands-helping {
   animation: slideToTheLeft 0.5s;
   animation-fill-mode: forwards;
 }
+.meals:hover .articleTitleAndDescriptionContainer {
+  animation: reduceWidth 0.5s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes reduceWidth {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 100px);
+  }
+}
 @keyframes slideToTheLeft {
   from {
     opacity: 1;
@@ -518,6 +527,9 @@ footer ul .fa-hands-helping {
 }
 
 .meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 15px;
   margin: 15px;
@@ -544,6 +556,19 @@ footer ul .fa-hands-helping {
   display: -webkit-box;
   -webkit-line-clamp: 1; /* number of lines to show */
   -webkit-box-orient: vertical;
+}
+
+.articleTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.articlePriceContainer {
+  font-weight: bold;
+  margin-top: 25px;
 }
 
 .btnorder {
@@ -700,9 +725,6 @@ footer ul .fa-hands-helping {
   margin-right: 15px;
 }
 
-.meals {
-  overflow: hidden;
-}
 .meals .checkContainer {
   animation: slideToTheRight 0.5s;
 }
@@ -718,7 +740,19 @@ footer ul .fa-hands-helping {
   animation: slideToTheLeft 0.5s;
   animation-fill-mode: forwards;
 }
+.meals:hover .articleTitleAndDescriptionContainer {
+  animation: reduceWidth 0.5s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes reduceWidth {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 100px);
+  }
+}
 @keyframes slideToTheLeft {
   from {
     opacity: 1;

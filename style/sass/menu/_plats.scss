@@ -28,6 +28,9 @@
 }
 
 .meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: $white;
   border-radius: 15px;
   margin: 15px;
@@ -54,4 +57,21 @@
    display: -webkit-box;
    -webkit-line-clamp: 1; /* number of lines to show */
    -webkit-box-orient: vertical;
+}
+
+.articleTitle {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+.articleTitleAndDescriptionContainer {
+
+}
+
+.articlePriceContainer {
+  font-weight: bold;
+  margin-top: 25px;
 }
